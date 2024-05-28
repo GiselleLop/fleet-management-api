@@ -1,0 +1,175 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>API-Fleet-Management</name>
+    </assembly>
+    <members>
+        <member name="T:ApplicationDbContext">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:ApplicationDbContext.#ctor(Microsoft.EntityFrameworkCore.DbContextOptions{ApplicationDbContext})">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:ApplicationDbContext.OnConfiguring(Microsoft.EntityFrameworkCore.DbContextOptionsBuilder)">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:ApplicationDbContext.Trajectories">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:ApplicationDbContext.Taxis">
+            <summary>
+            </summary>
+        </member>
+        <member name="T:TaxisController">
+            <summary>
+            Controlador para gestionar las operaciones relacionadas con taxis.
+            </summary>
+        </member>
+        <member name="M:TaxisController.#ctor(ApplicationDbContext)">
+            <summary>
+            Constructor de la clase TaxisController.
+            </summary>
+            <param name="context">Contexto de la base de datos de la aplicación.</param>
+        </member>
+        <member name="M:TaxisController.GetTaxis(System.Int32,System.Int32)">
+            <summary>
+            Obtiene todas los taxis disponibles en la base de datos.
+            </summary>
+        </member>
+        <member name="M:TaxisController.GetTaxi(System.Int32)">
+            <summary>
+            Obtiene un taxi por su ID.
+            </summary>
+        </member>
+        <member name="M:TaxisController.GetTaxiByPlate(System.String)">
+            <summary>
+            Obtiene un taxi por su placa.
+            </summary>
+        </member>
+        <member name="M:TaxisController.GetLastLocation(System.Int32)">
+            <summary>
+            Obtiene la última ubicación reportada por un taxi.
+            </summary>
+            <param name="taxiId">El ID del taxi.</param>
+            <returns>La última ubicación del taxi especificado junto con su placa.</returns>
+        </member>
+        <member name="T:TrajectoriesController">
+            <summary>
+            Controlador para gestionar las operaciones relacionadas con las trayectorias.
+            </summary>
+        </member>
+        <member name="M:TrajectoriesController.#ctor(ApplicationDbContext)">
+            <summary>
+            Constructor de la clase TrajectoriesController.
+            </summary>
+            <param name="context">Contexto de la base de datos de la aplicación.</param>
+        </member>
+        <member name="M:TrajectoriesController.GetTrajectories(System.Int32,System.Int32)">
+            <summary>
+            Obtiene todas las trayectorias disponibles en la base de datos.
+            </summary>
+        </member>
+        <member name="M:TrajectoriesController.GetTaxiLocations(System.Int32,System.String,System.Int32,System.Int32)">
+            <summary>
+            Obtiene todas las ubicaciones de un taxi para una fecha dada.
+            </summary>
+        </member>
+        <member name="T:API_Fleet_Management.Migrations.MiMigracion">
+            <inheritdoc />
+        </member>
+        <member name="M:API_Fleet_Management.Migrations.MiMigracion.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:API_Fleet_Management.Migrations.MiMigracion.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:API_Fleet_Management.Migrations.MiMigracion.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:Taxi">
+            <summary>
+            Clase que representa un taxi.
+            </summary>
+        </member>
+        <member name="P:Taxi.Id">
+            <summary>
+            Identificador único del taxi.
+            </summary>
+        </member>
+        <member name="P:Taxi.Plate">
+            <summary>
+            Placa del taxi.
+            </summary>
+        </member>
+        <member name="T:Trajectory">
+            <summary>
+            Clase que representa una trayectoria.
+            </summary>
+        </member>
+        <member name="P:Trajectory.Id">
+            <summary>
+            Identificador único de la trayectoria.
+            </summary>
+        </member>
+        <member name="P:Trajectory.TaxiId">
+            <summary>
+            Identificador único del taxi asociado a la trayectoria.
+            </summary>
+        </member>
+        <member name="P:Trajectory.Date">
+            <summary>
+            Fecha y hora de la trayectoria.
+            </summary>
+        </member>
+        <member name="P:Trajectory.Latitude">
+            <summary>
+            Latitud de la ubicación de la trayectoria.
+            </summary>
+        </member>
+        <member name="P:Trajectory.Longitude">
+            <summary>
+            Longitud de la ubicación de la trayectoria.
+            </summary>
+        </member>
+        <member name="T:Program">
+            <summary>
+            Clase principal que contiene el método de entrada para la aplicación.
+            </summary>
+        </member>
+        <member name="M:Program.Main(System.String[])">
+            <summary>
+            Punto de entrada principal para la aplicación.
+            </summary>
+            <param name="args">Argumentos de línea de comandos pasados a la aplicación.</param>
+        </member>
+        <member name="M:Program.CreateHostBuilder(System.String[])">
+            <summary>
+            Método que crea y configura el host de la aplicación.
+            </summary>
+            <param name="args">Argumentos de línea de comandos pasados a la aplicación.</param>
+            <returns>Una instancia de IHostBuilder configurada para la aplicación.</returns>
+        </member>
+        <member name="T:Startup">
+            <summary>
+            Clase de inicio de la aplicación.
+            </summary>
+        </member>
+        <member name="M:Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            Configura los servicios de la aplicación.
+            </summary>
+            <param name="services">Colección de servicios.</param>
+        </member>
+        <member name="M:Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IWebHostEnvironment)">
+            <summary>
+            Configura la aplicación y el pipeline de solicitud HTTP.
+            </summary>
+            <param name="app">Constructor de la aplicación.</param>
+            <param name="env">Entorno de hospedaje de la aplicación.</param>
+        </member>
+    </members>
+</doc>
