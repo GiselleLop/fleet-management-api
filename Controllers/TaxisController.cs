@@ -30,7 +30,6 @@ public class TaxisController : ControllerBase
             .Skip((page - 1) * pageSize)
             .Take(pageSize)
             .ToListAsync();
-
         return taxis;
     }
 
@@ -41,12 +40,10 @@ public class TaxisController : ControllerBase
     public async Task<ActionResult<Taxi>> GetTaxi(int id)
     {
         var taxi = await _context.Taxis.FindAsync(id);
-
         if (taxi == null)
         {
             return NotFound();
         }
-
         return taxi;
     }
 

@@ -139,3 +139,6 @@ C:\Users\gisel\OneDrive\Escritorio\API-Fleet-Management\bin\Debug\net8.0\runtime
 C:\Users\gisel\OneDrive\Escritorio\API-Fleet-Management\bin\Debug\net8.0\Swashbuckle.AspNetCore.Annotations.dll
 C:\Users\gisel\OneDrive\Escritorio\API-Fleet-Management\bin\Debug\net8.0\API-Fleet-Management.xml
 C:\Users\gisel\OneDrive\Escritorio\API-Fleet-Management\obj\Debug\net8.0\API-Fleet-Management.xml
+C:\Users\gisel\OneDrive\Escritorio\API-Fleet-Management\bin\Debug\net8.0\explaindev.json
+C:\Users\gisel\OneDrive\Escritorio\API-Fleet-Management\bin\Debug\net8.0\package-lock.json
+C:\Users\gisel\OneDrive\Escritorio\API-Fleet-Management\obj\Debug\net8.0\API-Fleet-Management.sourcelink.json

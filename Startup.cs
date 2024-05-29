@@ -5,7 +5,6 @@ using System.Reflection;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 
-
 /// <summary>
 /// Clase de inicio de la aplicación.
 /// </summary>
@@ -70,6 +69,17 @@ public class Startup
         app.UseSwaggerUI(c =>
         {
             c.SwaggerEndpoint("/swagger/v1/swagger.json", "API Documentation V1");
+        });
+
+        
+         app.Use(async (context, next) =>
+        {
+            if (context.Request.Path == "/")
+            {
+                context.Response.Redirect("/swagger");
+                return;
+            }
+            await next();
         });
 
         app.UseEndpoints(endpoints =>
